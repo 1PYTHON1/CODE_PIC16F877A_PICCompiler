@@ -1,0 +1,3 @@
+#include <16F887.h>
+#FUSES intrc_io,nowdt,noput,mclr,noprotect,nolvp
+#use delay(internal=8000000)

@@ -1,0 +1,88 @@
+[PROJECT]
+Target=PIC_I2C_LCD_PRUEBA.hex
+Processor_Text=PIC16F887
+CCSVerions=5.042
+Compiler=PCM
+CCSVersion=5.042
+[Target Data]
+FileList=PIC_I2C_LCD_PRUEBA.c
+[Directories]
+Include=
+[C:\Users\Casa\Desktop\PIC16F877A_PICC\PIC_I2C_LCD_PRUEBA\PIC_I2C_LCD_PRUEBA]
+Type=4
+[mru-list]
+1=PIC_I2C_LCD_PRUEBA.c
+
+[ProjectLog]
+Days=3
+D1=17-04-2020
+D1_L=12
+D1_L1=[43156]Project Opened.
+D1_L2=[43177]Started Editing.
+D1_L3=[44296]Stopped Editing.
+D1_L4=[44650]Started Editing.
+D1_L5=[45456]Stopped Editing.
+D1_L6=[45514]Started Editing.
+D1_L7=[46568]Stopped Editing.
+D1_L8=[46623]Started Editing.
+D1_L9=[47670]Stopped Editing.
+D1_L10=[50383]Started Editing.
+D1_L11=[51240]Stopped Editing.
+TotalEdit=161
+TotalDebug=0
+D1_E=62
+D1_D=0
+D1_L12=[51240]Project Closed.
+D2=18-04-2020
+D2_L=14
+D2_L1=[52761]Project Opened.
+D2_L2=[52956]Started Editing.
+D2_L3=[53678]Stopped Editing.
+D2_L4=[53993]Started Editing.
+D2_L5=[54011]Stopped Editing.
+D2_E=90
+D2_D=0
+D2_L6=[54011]Project Closed.
+D2_L7=[54130]Project Opened.
+D2_L8=[54140]Started Editing.
+D2_L9=[57490]Stopped Editing.
+D2_L10=[57553]Project Closed.
+D2_L11=[58638]Project Opened.
+D2_L12=[58757]Started Editing.
+D2_L13=[60595]Stopped Editing.
+D2_L14=[60595]Project Closed.
+D3=19-04-2020
+D3_L=12
+D3_L1=[43994]Project Opened.
+D3_L2=[44023]Started Editing.
+D3_L3=[44473]Stopped Editing.
+D3_L4=[44544]Started Editing.
+D3_L5=[45088]Stopped Editing.
+D3_E=9
+D3_D=0
+D3_L6=[46009]Project Closed.
+D3_L7=[46450]Project Opened.
+D3_L8=[46603]Project Closed.
+D3_L9=[48817]Project Opened.
+D3_L10=[48854]Started Editing.
+D3_L11=[48946]Stopped Editing.
+D3_L12=[48947]Project Closed.
+
+[Opened Files]
+1=PIC_I2C_LCD_PRUEBA.c
+t1=37
+2=PIC_I2C_LCD_PRUEBA.h
+t2=37
+Count=3
+3=Kbd.c
+t3=1
+4=..\..\..\..\..\Program Files (x86)\PICC\Drivers\i2c_Flex_LCD.c
+t4=164
+[PIC_I2C_LCD_PRUEBA.c]
+Type=4
+
+[defines]
+buildcount=91
+[Units]
+Count=1
+1=PIC_I2C_LCD_PRUEBA (main)

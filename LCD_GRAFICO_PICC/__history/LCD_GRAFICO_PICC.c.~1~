@@ -1,0 +1,11 @@
+#include <LCD_GRAFICO_PICC.h>
+
+void main()
+{
+
+	while(TRUE)
+	{
+		//TODO: User Code
+	}
+
+}

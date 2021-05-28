@@ -1,0 +1,14 @@
+#include <DISPLAY_7_SEG_PICC.h>
+byte CONST DISPLAY[10]={0X3F,0X06,0X5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F};
+
+
+void main()
+{
+byte ud=0, dec=0;
+output_b(0);
+   while(TRUE)
+   {
+      //TODO: User Code
+   }
+
+}

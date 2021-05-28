@@ -1,0 +1,46 @@
+[PROJECT]
+Target=CONTADOR_0_99999999.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.042
+Compiler=PCM
+CCSVersion=5.042
+[Target Data]
+FileList=CONTADOR_0_99999999.c
+[Directories]
+Include=
+[C:\Users\Casa\Desktop\PIC16F877A_PICC\CONTADOR_0_99999999\CONTADOR_0_99999999]
+Type=4
+[mru-list]
+1=CONTADOR_0_99999999.c
+
+[ProjectLog]
+Days=2
+D1=10-04-2020
+D1_L=4
+D1_L1=[45858]Project Opened.
+D1_L2=[45940]Started Editing.
+D1_L3=[48145]Stopped Editing.
+TotalEdit=32
+TotalDebug=0
+D1_E=32
+D1_D=0
+D1_L4=[50526]Project Closed.
+D2=11-04-2020
+D2_L=2
+D2_L1=[28663]Project Opened.
+D2_L2=[29217]Project Closed.
+
+[Opened Files]
+1=CONTADOR_0_99999999.c
+t1=1
+2=CONTADOR_0_99999999.h
+t2=1
+Count=2
+[CONTADOR_0_99999999.c]
+Type=4
+
+[defines]
+buildcount=15
+[Units]
+Count=1
+1=CONTADOR_0_99999999 (main)

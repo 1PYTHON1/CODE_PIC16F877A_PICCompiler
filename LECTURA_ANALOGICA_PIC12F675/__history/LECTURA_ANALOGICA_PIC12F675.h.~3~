@@ -1,0 +1,4 @@
+#include <12F675.h>
+#FUSES  HS,NOWDT,NOMCLR,NOPROTECT,NOPUT
+#use delay(crystal=20000000)
+

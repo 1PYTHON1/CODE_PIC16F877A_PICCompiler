@@ -1,0 +1,166 @@
+CCS PCM C Compiler, Version 5.042, 5967               09-Abr.-20 11:27
+
+               Filename:   C:\Users\Casa\Desktop\PIC16F877A_PICC\HOLA_MUNDO_PICC_\HOLA_MUNDO_PICC_.lst
+
+               ROM used:   93 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   6 (2%) at main() level
+                           7 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   03F
+0003:  NOP
+.................... #include <HOLA_MUNDO_PICC_.h>   ///CABECERA DONDE SE CONFIGURA EL PIC  
+.................... #include <16F877A.h> 
+.................... //////////// Standard Header file for the PIC16F877A device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877A 
+....................  
+.................... #list 
+....................  
+.................... #FUSES  XT,NOWDT 
+.................... #use delay(crystal=4000000) 
+0004:  MOVLW  22
+0005:  MOVWF  04
+0006:  BCF    03.7
+0007:  MOVF   00,W
+0008:  BTFSC  03.2
+0009:  GOTO   018
+000A:  MOVLW  01
+000B:  MOVWF  78
+000C:  CLRF   77
+000D:  DECFSZ 77,F
+000E:  GOTO   00D
+000F:  DECFSZ 78,F
+0010:  GOTO   00C
+0011:  MOVLW  4A
+0012:  MOVWF  77
+0013:  DECFSZ 77,F
+0014:  GOTO   013
+0015:  GOTO   016
+0016:  DECFSZ 00,F
+0017:  GOTO   00A
+0018:  RETURN
+.................... #USE STANDARD_IO (B) 
+.................... #USE STANDARD_IO (D) 
+....................  
+....................  
+....................  
+....................  
+.................... void LEE_B0() 
+.................... { 
+....................  IF(INPUT(PIN_B0))  ///LEE EL PIN B0, SI ESTA EN 1 ENTRA EN LA FUNCION 
+....................  OUTPUT_HIGH(PIN_B1);  //// PRENDE EL LED EN EL PIN B1 
+....................  ELSE                  //// SI IF ES FALSO HACE ESTA FUNCION 
+....................  OUTPUT_LOW(PIN_B1);    ////APAGA EL LED  
+....................  } 
+.................... void J_LUCES_1() 
+.................... { 
+.................... OUTPUT_D(0B01010101); 
+0019:  BSF    03.5
+001A:  CLRF   08
+001B:  MOVLW  55
+001C:  BCF    03.5
+001D:  MOVWF  08
+.................... delay_ms(200); 
+001E:  MOVLW  C8
+001F:  MOVWF  22
+0020:  CALL   004
+.................... OUTPUT_D(0B10101010); 
+0021:  BSF    03.5
+0022:  CLRF   08
+0023:  MOVLW  AA
+0024:  BCF    03.5
+0025:  MOVWF  08
+.................... delay_ms(200); 
+0026:  MOVLW  C8
+0027:  MOVWF  22
+0028:  CALL   004
+0029:  BCF    0A.3
+002A:  BCF    0A.4
+002B:  GOTO   051 (RETURN)
+.................... } 
+.................... void J_LUCES_2() 
+.................... { 
+.................... OUTPUT_D(0B11110000); 
+002C:  BSF    03.5
+002D:  CLRF   08
+002E:  MOVLW  F0
+002F:  BCF    03.5
+0030:  MOVWF  08
+.................... delay_ms(200); 
+0031:  MOVLW  C8
+0032:  MOVWF  22
+0033:  CALL   004
+.................... OUTPUT_D(0B00001111); 
+0034:  BSF    03.5
+0035:  CLRF   08
+0036:  MOVLW  0F
+0037:  BCF    03.5
+0038:  MOVWF  08
+.................... delay_ms(200); 
+0039:  MOVLW  C8
+003A:  MOVWF  22
+003B:  CALL   004
+003C:  BCF    0A.3
+003D:  BCF    0A.4
+003E:  GOTO   059 (RETURN)
+.................... } 
+.................... void main() 
+003F:  MOVF   03,W
+0040:  ANDLW  1F
+0041:  MOVWF  03
+0042:  BSF    03.5
+0043:  BSF    1F.0
+0044:  BSF    1F.1
+0045:  BSF    1F.2
+0046:  BCF    1F.3
+0047:  MOVLW  07
+0048:  MOVWF  1C
+0049:  BCF    03.7
+.................... { 
+....................    while(TRUE) 
+....................    { 
+....................    for(int x=0;x<10;x++) 
+004A:  BCF    03.5
+004B:  CLRF   21
+004C:  MOVF   21,W
+004D:  SUBLW  09
+004E:  BTFSS  03.0
+004F:  GOTO   053
+....................    J_LUCES_1 (); 
+0050:  GOTO   019
+0051:  INCF   21,F
+0052:  GOTO   04C
+....................    for( x=0;x<10;x++) 
+0053:  CLRF   21
+0054:  MOVF   21,W
+0055:  SUBLW  09
+0056:  BTFSS  03.0
+0057:  GOTO   05B
+....................    J_LUCES_2 (); 
+0058:  GOTO   02C
+0059:  INCF   21,F
+005A:  GOTO   054
+005B:  GOTO   04B
+....................    } 
+.................... } 
+....................  
+005C:  SLEEP
+....................  
+....................  
+
+Configuration Fuses:
+   Word  1: 3F71   XT NOWDT PUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

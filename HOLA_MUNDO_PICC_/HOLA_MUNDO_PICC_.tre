@@ -1,0 +1,9 @@
+ÀÄHOLA_MUNDO_PICC_
+   ÀÄMAIN  0/30  Ram=1
+      ÃÄ@cinit1  (Inline)  Ram=0
+      ÃÄJ_LUCES_1  0/19  Ram=0
+      ³  ÃÄ@delay_ms1  0/21  Ram=1
+      ³  ÀÄ@delay_ms1  0/21  Ram=1
+      ÀÄJ_LUCES_2  0/19  Ram=0
+         ÃÄ@delay_ms1  0/21  Ram=1
+         ÀÄ@delay_ms1  0/21  Ram=1

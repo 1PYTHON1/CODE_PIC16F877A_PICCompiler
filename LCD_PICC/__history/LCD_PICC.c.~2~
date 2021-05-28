@@ -1,0 +1,14 @@
+#include <LCD_PICC.h>
+#include <lcd.c>
+
+void main()
+{
+
+   lcd_init();
+
+   while(TRUE)
+   {
+      //TODO: User Code
+   }
+
+}

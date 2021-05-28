@@ -1,0 +1,53 @@
+#include <PIC_I2C_LCD_PRUEBA.h>
+//************************************************************************************ 
+// Display LCD con Librería "i2c_Flex_LCD" Integrado (PCF8574T) 
+// Código principal:
+// Sergio Castaño
+// https://controlautomaticoeducacion.com
+//***********************************************************************************
+
+#byte porta = 0xf80 // Identificador para el puerto A. 
+#byte portb = 0xf81 // Identificador para el puerto B. 
+#byte portc = 0xf82 // Identificador para el puerto C. 
+#byte portd = 0xf83 // Identificador para el puerto D. 
+#byte porte = 0xf84 // Identificador para el puerto E.
+#use i2c(Master,Fast=100000, sda=PIN_C4, scl=PIN_C3,force_sw) 
+#include <i2c_Flex_LCD.c>  
+INT X;
+INT CONTADOR=0;
+void main() {  
+INT16 q;
+float p;
+setup_adc_ports(0);
+setup_adc(adc_clock_internal);
+lcd_init(0x4E  ,16,2);
+lcd_backlight_led(ON); //Enciende la luz de Fondo
+while (TRUE) { 
+set_adc_channel(0);
+q=read_adc();
+p=(5*q)/1024;
+delay_ms(10);
+lcd_clear();  
+LCD_GOTOXY(1,1);
+LCD_PUTC("123456789");
+LCD_GOTOXY(11,1);
+PRINTF(LCD_PUTC,"%4.1f",p);
+FOR( X=1;X<=16;X=X+2)
+{
+LCD_GOTOXY(X,2);
+LCD_PUTC("=)");
+DELAY_MS(20);
+}
+FOR( X=1;X<=16;X=X+2)
+{
+LCD_GOTOXY(X,2);
+LCD_PUTC("=(");
+DELAY_MS(20);
+}
+CONTADOR++;
+IF(CONTADOR==21)
+CONTADOR=0;
+delay_ms(100); 
+
+}    
+} 

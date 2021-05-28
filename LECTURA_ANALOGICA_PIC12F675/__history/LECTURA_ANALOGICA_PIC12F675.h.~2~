@@ -1,0 +1,5 @@
+#include <12F675.h>
+#FUSES  HS,NOWDT,NOMCLR,NOPROTECT,NOPUT
+#device ADC=10
+#use delay(crystal=20000000)
+

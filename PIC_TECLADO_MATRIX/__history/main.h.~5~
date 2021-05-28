@@ -1,0 +1,3 @@
+#include <16F887.h>
+#FUSES XT,nowdt,noput,mclr,noprotect,nolvp
+#use delay(crystal=4000000)

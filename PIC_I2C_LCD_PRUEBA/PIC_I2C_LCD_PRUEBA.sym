@@ -1,0 +1,171 @@
+004-005 @WRITE_PROGRAM_MEMORY8.P1
+004-005 @READ_PROGRAM_MEMORY8.P2
+008     kbd
+015     CCP_1_LOW
+015     CCP_1
+016     CCP_1_HIGH
+01B     CCP_2
+01B     CCP_2_LOW
+01C     CCP_2_HIGH
+020     LCD_ADDR
+021     lcd_total_rows
+022     lcd_total_columns
+023     new_row_request
+024     BACKLIGHT_LED
+025     lcd_gotoxy.data
+026     kbd_getc.kbd_call_count
+027.0   kbd_getc.kbd_down
+028     kbd_getc.last_key
+029     kbd_getc.col
+02A     x
+02B-02C @sprintf_string
+02D     lcd_backlight_led.bl
+02D     lcd_init.addr
+02D-030 LEER_A0.q
+02D     MAIN.@SCRATCH1
+02D     @PSTRINGC7_665.@SCRATCH1
+02E     lcd_init.col
+02E     @PSTRINGC7_665.@SCRATCH2
+02F     lcd_init.row
+02F     @PSTRINGC7_665.@SCRATCH3
+030     lcd_init.i
+030     @PSTRINGC7_665.@SCRATCH4
+031-034 LEER_A0.p
+031     lcd_init.@SCRATCH1
+035-036 @ITOF.P1
+035-038 @PRINTF_L32D_665FPFPF.P2
+035     LEER_A0.@SCRATCH1
+036     LEER_A0.@SCRATCH2
+037     LEER_A0.@SCRATCH3
+038     LEER_A0.@SCRATCH4
+039     @PRINTF_L32D_665FPFPF.P1
+039-03C @DIVFF.P2
+03A     @PRINTF_L32D_665FPFPF.@SCRATCH1
+03B     @PRINTF_L32D_665FPFPF.@SCRATCH2
+03C     @PRINTF_L32D_665FPFPF.@SCRATCH3
+03D-040 @DIVFF.P1
+03D     @PRINTF_L32D_665FPFPF.@SCRATCH4
+03E     @PRINTF_L32D_665FPFPF.@SCRATCH5
+03F     @PRINTF_L32D_665FPFPF.@SCRATCH6
+040     @PRINTF_L32D_665FPFPF.@SCRATCH7
+041     @DIVFF.@SCRATCH1
+041     @PRINTF_L32D_665FPFPF.@SCRATCH8
+042     LCD_PUTC.in_data
+042-045 @DIV3232.P1
+042-045 @FTOSD.P2
+042-045 @MULFF.P3
+042     @DIVFF.@SCRATCH2
+043     @delay_ms1.P1
+043     lcd_gotoxy.x
+043     @DIVFF.@SCRATCH3
+044     lcd_gotoxy.y
+044     @DIVFF.@SCRATCH4
+045     lcd_gotoxy.row
+045     @DIVFF.@SCRATCH5
+046     lcd_gotoxy.column
+046-049 @MULFF.P1
+046-049 @DIV3232.P2
+046     @DIVFF.@SCRATCH6
+046     @FTOSD.@SCRATCH1
+047     lcd_gotoxy.row_addr
+048     lcd_gotoxy.lcd_address
+049     lcd_gotoxy.@SCRATCH1
+04A     lcd_send_byte.data
+04A     @MULFF.@SCRATCH1
+04A     @DIV3232.@SCRATCH1
+04B     lcd_send_byte.type
+04B     @MULFF.@SCRATCH2
+04B     @DIV3232.@SCRATCH2
+04C     lcd_send_byte.@SCRATCH1
+04C     @MULFF.@SCRATCH3
+04C     @DIV3232.@SCRATCH3
+04D     i2c_send_nibble.data
+04D     @MULFF.@SCRATCH4
+04D     @DIV3232.@SCRATCH4
+04E     i2c_send_nibble.type
+04E     @MULFF.@SCRATCH5
+04E     @DIV3232.@SCRATCH5
+04F     i2c_send_nibble.@SCRATCH1
+050     @I2C_WRITE_1.P1
+077     @SCRATCH
+078     @SCRATCH
+078     _RETURN_
+079     @SCRATCH
+07A     @SCRATCH
+107.6   C1OUT
+108.6   C2OUT
+10D-10E @WRITE_PROGRAM_MEMORY8.P1
+10D-10E @READ_PROGRAM_MEMORY8.P2
+F80     porta
+F81     portb
+F82     portc
+F83     portd
+F84     porte
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const708.call
+00000D  @const713.call
+000011  @const714.call
+000012  @const715.call
+000016  kbd_init
+000019  @delay_ms1
+00002D  @I2C_WRITE_1
+000061  i2c_send_nibble
+0000AD  lcd_send_byte
+0000DE  lcd_clear
+0000E8  lcd_init
+000147  lcd_backlight_led
+000151  lcd_gotoxy
+000188  LCD_PUTC
+0001AD  @PSTRINGC7_665
+000203  @MULFF
+000278  @DIV3232
+0002C7  @PRINTF_L32D_665FPFPF
+0002EE  @FTOSD
+0003A7  LEER_A0
+0003B8  @ITOF
+000404  @DIVFF
+00050B  MAIN
+00050B  @cinit1
+000523  @cinit2
+
+Project Directory:
+    C:\Users\Casa\Desktop\PIC16F877A_PICC\PIC_I2C_LCD_PRUEBA\
+
+Project Files:
+    PIC_I2C_LCD_PRUEBA.c                                    [19-Abr.-20 12:16  CRC=D9AADBC9]
+    PIC_I2C_LCD_PRUEBA.h                                    [17-Abr.-20 12:51  CRC=00000000]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h [13-Feb.-15 08:25  CRC=C17128AA]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\i2c_Flex_LCD.c [03-Set.-19 19:13  CRC=16AFB211]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\Kbd.c   [23-Set.-10 09:09  CRC=8814BCFC]
+
+Source signature=C1F5307C
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=0033
+
+Units:
+    PIC_I2C_LCD_PRUEBA (main)
+
+Compiler Settings:
+    Processor:      PIC16F887
+    Pointer Size:   16
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   PIC_I2C_LCD_PRUEBA.xsym
+    Errors:      PIC_I2C_LCD_PRUEBA.err
+    Ext Symbols: PIC_I2C_LCD_PRUEBA.esym
+    INHX8:       PIC_I2C_LCD_PRUEBA.hex
+    Symbols:     PIC_I2C_LCD_PRUEBA.sym
+    List:        PIC_I2C_LCD_PRUEBA.lst
+    Debug/COFF:  PIC_I2C_LCD_PRUEBA.cof
+    Project:     PIC_I2C_LCD_PRUEBA.ccspjt
+    Call Tree:   PIC_I2C_LCD_PRUEBA.tre
+    Statistics:  PIC_I2C_LCD_PRUEBA.STA

@@ -1,0 +1,106 @@
+004-005 @READ_PROGRAM_MEMORY8.P1
+019.6   C1OUT
+020     @SCRATCH
+021     @SCRATCH
+021     _RETURN_
+022     @SCRATCH
+023     @SCRATCH
+024     LCD_ADDR
+025     lcd_total_rows
+026     lcd_total_columns
+027     new_row_request
+028     BACKLIGHT_LED
+029     lcd_gotoxy.data
+02A     @sprintf_string
+02B-02C MAIN.analogico
+02D     MAIN.temperatura
+02E     lcd_init.addr
+02E     @PRINTF_U_560.P1
+02E     MAIN.@SCRATCH1
+02F     lcd_init.col
+02F     @PRINTF_U_560.P1
+02F     MAIN.@SCRATCH2
+030     lcd_init.row
+030-031 @MUL1616.P1
+030     LCD_PUTC.in_data
+030     @DIV88.P1
+031     lcd_init.i
+031     lcd_gotoxy.x
+031     @DIV88.P1
+032-033 @MUL1616.P1
+032     @delay_ms1.P2
+032     lcd_gotoxy.y
+032     lcd_init.@SCRATCH1
+032     @DIV88.@SCRATCH1
+033     lcd_gotoxy.row
+034     lcd_gotoxy.column
+034     @MUL1616.@SCRATCH1
+035     lcd_gotoxy.row_addr
+036     lcd_gotoxy.lcd_address
+037     lcd_gotoxy.@SCRATCH1
+038     lcd_send_byte.data
+039     lcd_send_byte.type
+03A     lcd_send_byte.@SCRATCH1
+03B     i2c_send_nibble.data
+03C     i2c_send_nibble.type
+03D     i2c_send_nibble.@SCRATCH1
+03E     @I2C_WRITE_1.P1
+09B-09C @READ_PROGRAM_MEMORY8.P1
+
+ROM Allocation:
+000004  LCD_INIT_STRING.call
+000008  LCD_INIT_STRING.data
+00000C  @const570.call
+000021  @const574.call
+000032  @delay_ms1
+000045  @I2C_WRITE_1
+00008D  i2c_send_nibble
+0000DD  lcd_send_byte
+00011F  lcd_clear
+000129  lcd_init
+000197  @MUL1616
+0001AC  lcd_gotoxy
+0001E3  LCD_PUTC
+000208  @DIV88
+00021D  @PRINTF_U_560
+000252  @cinit1
+000252  MAIN
+000263  @cinit2
+
+Project Directory:
+    C:\Users\Casa\Desktop\PIC16F877A_PICC\LECTURA_ANALOGICA_PIC12F675\
+
+Project Files:
+    LECTURA_ANALOGICA_PIC12F675.c                           [17-Abr.-20 11:45  CRC=AA4B53DA]
+    LECTURA_ANALOGICA_PIC12F675.h                           [17-Abr.-20 10:57  CRC=00000000]
+    ..\..\..\..\..\Program Files (x86)\PICC\Devices\12F675.h [13-Feb.-15 08:24  CRC=58C3DD17]
+    ..\..\..\..\..\Program Files (x86)\PICC\Drivers\i2c_Flex_LCD.c [03-Set.-19 19:13  CRC=16AFB211]
+
+Source signature=306E9513
+Program memory checksum=0000
+Program memory CRC=0000
+Hex file CRC=30DD
+
+Units:
+    LECTURA_ANALOGICA_PIC12F675 (main)
+
+Compiler Settings:
+    Processor:      PIC12F675
+    Pointer Size:   8
+    ADC Range:      0-1023
+    Opt Level:      9
+    Short,Int,Long: UNSIGNED: 1,8,16
+    Float,Double:   32,32
+    Compile Mode:       CCS5
+
+Output Files:
+    XREF file:   LECTURA_ANALOGICA_PIC12F675.xsym
+    Errors:      LECTURA_ANALOGICA_PIC12F675.err
+    Ext Symbols: LECTURA_ANALOGICA_PIC12F675.esym
+    INHX8:       LECTURA_ANALOGICA_PIC12F675.hex
+    Symbols:     LECTURA_ANALOGICA_PIC12F675.sym
+    List:        LECTURA_ANALOGICA_PIC12F675.lst
+    Debug/COFF:  LECTURA_ANALOGICA_PIC12F675.cof
+    Project:     LECTURA_ANALOGICA_PIC12F675.ccspjt
+    Call Tree:   LECTURA_ANALOGICA_PIC12F675.tre
+    Statistics:  LECTURA_ANALOGICA_PIC12F675.STA

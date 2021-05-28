@@ -1,0 +1,52 @@
+[PROJECT]
+Target=LCD_PICC.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.042
+Compiler=PCM
+CCSVersion=5.042
+[Target Data]
+FileList=LCD_PICC.c
+[Directories]
+Include=
+[C:\Users\Casa\Desktop\PIC16F877A_PICC\LCD_PICC\LCD_PICC]
+Type=4
+[mru-list]
+1=LCD_PICC.c
+
+[ProjectLog]
+Days=1
+D1=11-04-2020
+D1_L=12
+D1_L1=[29218]Project Opened.
+D1_L2=[29221]Started Editing.
+D1_L3=[30703]Stopped Editing.
+D1_L4=[31075]Started Editing.
+D1_L5=[32221]Stopped Editing.
+D1_L6=[34815]Started Editing.
+D1_L7=[35213]Stopped Editing.
+D1_L8=[36685]Started Editing.
+D1_L9=[38755]Stopped Editing.
+D1_L10=[39858]Started Editing.
+D1_L11=[40230]Stopped Editing.
+TotalEdit=67
+TotalDebug=0
+D1_E=67
+D1_D=0
+D1_L12=[42913]Project Closed.
+
+[Opened Files]
+1=LCD_PICC.c
+t1=1
+2=..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+t2=13
+3=..\..\..\..\..\Program Files (x86)\PICC\Drivers\lcd.c
+t3=1
+Count=2
+[LCD_PICC.c]
+Type=4
+
+[defines]
+buildcount=33
+[Units]
+Count=1
+1=LCD_PICC (main)

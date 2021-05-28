@@ -1,0 +1,60 @@
+
+ROM used:   734/1024 (72%)
+            734/1024 (72%) including unused fragments
+
+            1.0 Average locations per line
+            7.7 Average locations per statement
+
+RAM used:   16/64 (25%) at main() level
+            31/64 (48%) worst case
+
+Stack used: 5 worst case (5 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   30    18  19  LECTURA_ANALOGICA_PIC12F675.c
+    6     0   0  LECTURA_ANALOGICA_PIC12F675.h
+  499     0   0  ..\..\..\..\..\Program Files (x86)\PICC\Devices\12F675.h
+  211    77  81  ..\..\..\..\..\Program Files (x86)\PICC\Drivers\i2c_Flex_LCD.c
+----- -----
+  746    95 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     19   3    1             @delay_ms1
+0     72  10    1    667  5.7  @I2C_WRITE_1
+0     80  11    3    574  5.9  i2c_send_nibble
+0     66   9    3    149  2.8  lcd_send_byte
+0     10   1    0     61  1.9  lcd_clear
+0      8   1    0    667  5.7  @const550
+0    110  15    5    902  5.8  lcd_init
+0     55   7    7    681  8.0  lcd_gotoxy
+0     37   5    1    310  5.9  LCD_PUTC
+0    140  19    5    526  3.7  MAIN
+0     21   3    5    676  5.7  @MUL1616
+0     21   3    0             @const570
+0     17   2    0             @const574
+0     21   3    3             @DIV88
+0     53   7    2             @PRINTF_U_560
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               10
+    Statements              95
+    Comments                179
+    Volume (V)              8037
+    Difficulty (D)          51.0
+    Effort to implement (E) 409832
+    Time to implement (T)   6 hours, 19 minutes
+    Est Delivered Bugs (B)  2
+    Cyclomatic Complexity   19
+    Maintainability (MI)    113
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-003FF   730  290  
+
+
+

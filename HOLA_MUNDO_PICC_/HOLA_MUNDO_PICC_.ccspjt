@@ -1,0 +1,48 @@
+[PROJECT]
+Target=HOLA_MUNDO_PICC_.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.042
+Compiler=PCM
+CCSVersion=5.042
+[Target Data]
+FileList=HOLA_MUNDO_PICC_.c
+[Directories]
+Include=
+[C:\Users\Casa\Desktop\PIC16F877A_PICC\HOLA_MUNDO_PICC_\HOLA_MUNDO_PICC_]
+Type=4
+[mru-list]
+1=HOLA_MUNDO_PICC_.c
+
+[ProjectLog]
+Days=2
+D1=09-04-2020
+D1_L=6
+D1_L1=[38975]Project Opened.
+D1_L2=[38990]Started Editing.
+D1_L3=[40295]Stopped Editing.
+D1_L4=[40407]Started Editing.
+D1_L5=[41554]Stopped Editing.
+TotalEdit=31
+TotalDebug=0
+D1_E=31
+D1_D=0
+D1_L6=[45280]Project Closed.
+D2=10-04-2020
+D2_L=2
+D2_L1=[41156]Project Opened.
+D2_L2=[41332]Project Closed.
+
+[Opened Files]
+1=HOLA_MUNDO_PICC_.c
+t1=1
+Count=2
+2=HOLA_MUNDO_PICC_.h
+t2=1
+[HOLA_MUNDO_PICC_.c]
+Type=4
+
+[defines]
+buildcount=16
+[Units]
+Count=1
+1=HOLA_MUNDO_PICC_ (main)

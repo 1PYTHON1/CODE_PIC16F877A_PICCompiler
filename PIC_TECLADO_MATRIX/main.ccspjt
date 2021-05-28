@@ -1,0 +1,58 @@
+[PROJECT]
+Target=main.hex
+Processor_Text=PIC16F887
+CCSVerions=5.042
+Compiler=PCM
+CCSVersion=5.042
+[Target Data]
+FileList=main.c
+[Directories]
+Include=
+[C:\Users\Casa\Desktop\PIC_TECLADO_MATRIX\main]
+Type=4
+[mru-list]
+1=main.c
+
+[ProjectLog]
+Days=1
+D1=24-04-2020
+D1_L=14
+D1_L1=[37658]Project Opened.
+D1_L2=[37664]Started Editing.
+D1_L3=[39263]Stopped Editing.
+D1_L4=[39304]Started Editing.
+D1_L5=[39830]Stopped Editing.
+D1_L6=[40495]Started Editing.
+D1_L7=[40810]Stopped Editing.
+D1_L8=[40859]Started Editing.
+D1_L9=[43669]Stopped Editing.
+D1_L10=[43680]Started Editing.
+D1_L11=[45871]Stopped Editing.
+D1_L12=[46774]Started Editing.
+D1_L13=[47124]Stopped Editing.
+TotalEdit=100
+TotalDebug=0
+D1_E=100
+D1_D=0
+D1_L14=[48316]Project Closed.
+
+[Opened Files]
+1=main.c
+t1=1
+2=main.h
+t2=1
+Count=5
+3=..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.C
+t3=1
+4=Kbd.c
+t4=101
+5=..\..\..\..\Program Files (x86)\PICC\Drivers\Kbd4x4.c
+t5=25
+[main.c]
+Type=4
+
+[defines]
+buildcount=50
+[Units]
+Count=1
+1=main (main)

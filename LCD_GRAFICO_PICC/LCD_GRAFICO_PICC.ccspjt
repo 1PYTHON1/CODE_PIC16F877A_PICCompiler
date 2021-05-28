@@ -1,0 +1,78 @@
+[PROJECT]
+Target=LCD_GRAFICO_PICC.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.042
+Compiler=PCM
+CCSVersion=5.042
+[Target Data]
+FileList=LCD_GRAFICO_PICC.c
+[Directories]
+Include=
+[C:\Users\Casa\Desktop\PIC16F877A_PICC\LCD_GRAFICO_PICC\LCD_GRAFICO_PICC]
+Type=4
+[mru-list]
+1=LCD_GRAFICO_PICC.c
+
+[ProjectLog]
+Days=4
+D1=11-04-2020
+D1_L=8
+D1_L1=[42914]Project Opened.
+D1_L2=[42926]Started Editing.
+D1_L3=[43264]Stopped Editing.
+D1_L4=[43908]Started Editing.
+D1_L5=[45026]Stopped Editing.
+D1_L6=[45353]Started Editing.
+D1_L7=[47832]Stopped Editing.
+TotalEdit=67
+TotalDebug=0
+D1_E=51
+D1_D=0
+D1_L8=[48702]Project Closed.
+D2=14-05-2020
+D2_L=2
+D2_L1=[78883]Project Opened.
+D2_L2=[79788]Project Closed.
+D3=15-05-2020
+D3_L=16
+D3_L1=[60970]Project Opened.
+D3_L2=[61348]Started Editing.
+D3_L3=[62173]Stopped Editing.
+D3_L4=[64320]Started Editing.
+D3_L5=[64640]Stopped Editing.
+D3_L6=[64640]Started Editing.
+D3_L7=[64943]Stopped Editing.
+D3_L8=[65245]Started Editing.
+D3_L9=[65620]Stopped Editing.
+D3_L10=[68214]Started Editing.
+D3_L11=[68514]Stopped Editing.
+D3_E=16
+D3_D=0
+D3_L12=[69474]Project Closed.
+D3_L13=[72842]Project Opened.
+D3_L14=[72971]Started Editing.
+D3_L15=[73570]Stopped Editing.
+D3_L16=[73581]Project Closed.
+D4=16-05-2020
+D4_L=2
+D4_L1=[70617]Project Opened.
+D4_L2=[73229]Project Closed.
+
+[Opened Files]
+1=LCD_GRAFICO_PICC.c
+t1=234
+2=LCD_GRAFICO_PICC.h
+t2=1
+Count=2
+3=..\..\..\..\..\Program Files (x86)\PICC\Drivers\graphics.c
+t3=65
+4=..\..\..\..\..\Program Files (x86)\PICC\Drivers\HDM64GS12.c
+t4=21
+[LCD_GRAFICO_PICC.c]
+Type=4
+
+[defines]
+buildcount=41
+[Units]
+Count=1
+1=LCD_GRAFICO_PICC (main)

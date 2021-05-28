@@ -1,0 +1,15 @@
+#include <LCD_PICC.h>
+#include <lcd.c>
+#defined use_portb_lcd TRUE
+void main()
+{
+
+   lcd_init();
+
+   while(TRUE)
+   {
+   lcd_gotoxy(1,1);
+   lcd_putc("hola mundo");
+   }
+
+}

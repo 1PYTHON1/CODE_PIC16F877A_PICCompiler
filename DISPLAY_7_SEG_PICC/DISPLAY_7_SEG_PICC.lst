@@ -1,0 +1,173 @@
+CCS PCM C Compiler, Version 5.042, 5967               10-Abr.-20 12:08
+
+               Filename:   C:\Users\Casa\Desktop\PIC16F877A_PICC\DISPLAY_7_SEG_PICC\DISPLAY_7_SEG_PICC.lst
+
+               ROM used:   107 words (1%)
+                           Largest free fragment is 2048
+               RAM used:   9 (2%) at main() level
+                           9 (2%) worst case
+               Stack used: 0 locations
+               Stack size: 8
+
+*
+0000:  MOVLW  00
+0001:  MOVWF  0A
+0002:  GOTO   027
+0003:  NOP
+.................... #include <DISPLAY_7_SEG_PICC.h> 
+.................... #include <16F877A.h> 
+.................... //////////// Standard Header file for the PIC16F877A device //////////////// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... ////        (C) Copyright 1996, 2014 Custom Computer Services          //// 
+.................... //// This source code may only be used by licensed users of the CCS C  //// 
+.................... //// compiler.  This source code may only be distributed to other      //// 
+.................... //// licensed users of the CCS C compiler.  No other use, reproduction //// 
+.................... //// or distribution is permitted without written permission.          //// 
+.................... //// Derivative programs created using this software in object code    //// 
+.................... //// form are not restricted in any way.                               //// 
+.................... /////////////////////////////////////////////////////////////////////////// 
+.................... #device PIC16F877A 
+0004:  BCF    0A.0
+0005:  BCF    0A.1
+0006:  BCF    0A.2
+0007:  ADDWF  02,F
+0008:  RETLW  3F
+0009:  RETLW  06
+000A:  RETLW  5B
+000B:  RETLW  4F
+000C:  RETLW  66
+000D:  RETLW  6D
+000E:  RETLW  7D
+000F:  RETLW  07
+0010:  RETLW  7F
+0011:  RETLW  6F
+....................  
+.................... #list 
+....................  
+.................... #fuses   XT,NOWDT,NOPUT,NOLVP,NOPROTECT   
+.................... #use delay(crystal=4000000) 
+0012:  MOVLW  23
+0013:  MOVWF  04
+0014:  BCF    03.7
+0015:  MOVF   00,W
+0016:  BTFSC  03.2
+0017:  GOTO   026
+0018:  MOVLW  01
+0019:  MOVWF  78
+001A:  CLRF   77
+001B:  DECFSZ 77,F
+001C:  GOTO   01B
+001D:  DECFSZ 78,F
+001E:  GOTO   01A
+001F:  MOVLW  4A
+0020:  MOVWF  77
+0021:  DECFSZ 77,F
+0022:  GOTO   021
+0023:  GOTO   024
+0024:  DECFSZ 00,F
+0025:  GOTO   018
+0026:  RETURN
+.................... #use standard_io(b) 
+.................... #use standard_io(c) 
+.................... #use standard_io(d) 
+.................... #use standard_io(a) 
+....................  
+....................  
+.................... byte CONST DISPLAY[10]={0X3F,0X06,0X5B,0X4F,0X66,0X6D,0X7D,0X07,0X7F,0X6F}; 
+....................  
+....................  
+.................... void main() 
+0027:  MOVF   03,W
+0028:  ANDLW  1F
+0029:  MOVWF  03
+002A:  MOVLW  FF
+002B:  MOVWF  20
+002C:  BSF    03.5
+002D:  BSF    1F.0
+002E:  BSF    1F.1
+002F:  BSF    1F.2
+0030:  BCF    1F.3
+0031:  MOVLW  07
+0032:  MOVWF  1C
+0033:  BCF    03.7
+0034:  BCF    03.5
+0035:  CLRF   21
+0036:  CLRF   22
+.................... { 
+.................... byte un=0, dec=0; 
+.................... output_b(0); 
+0037:  BSF    03.5
+0038:  CLRF   06
+0039:  BCF    03.5
+003A:  CLRF   06
+....................    while(TRUE) 
+....................    { 
+....................     for(dec=0;dec<10;dec++) 
+003B:  CLRF   22
+003C:  MOVF   22,W
+003D:  SUBLW  09
+003E:  BTFSS  03.0
+003F:  GOTO   069
+....................     { 
+....................     for(un=0;un<10;un++) 
+0040:  CLRF   21
+0041:  MOVF   21,W
+0042:  SUBLW  09
+0043:  BTFSS  03.0
+0044:  GOTO   067
+....................     {  
+....................     output_a(0x02); 
+0045:  BSF    03.5
+0046:  CLRF   05
+0047:  MOVLW  02
+0048:  BCF    03.5
+0049:  MOVWF  05
+....................     output_b(DISPLAY[un]); 
+004A:  MOVF   21,W
+004B:  CALL   004
+004C:  MOVWF  23
+004D:  BSF    03.5
+004E:  CLRF   06
+004F:  BCF    03.5
+0050:  MOVF   23,W
+0051:  MOVWF  06
+....................     delay_ms(50); 
+0052:  MOVLW  32
+0053:  MOVWF  23
+0054:  CALL   012
+....................     //if(dec==0) 
+....................     //output_a(0x03); 
+....................     //else 
+....................     output_a(0x01); 
+0055:  BSF    03.5
+0056:  CLRF   05
+0057:  MOVLW  01
+0058:  BCF    03.5
+0059:  MOVWF  05
+....................     output_b(DISPLAY[dec]); 
+005A:  MOVF   22,W
+005B:  CALL   004
+005C:  MOVWF  23
+005D:  BSF    03.5
+005E:  CLRF   06
+005F:  BCF    03.5
+0060:  MOVF   23,W
+0061:  MOVWF  06
+....................     delay_ms(50); 
+0062:  MOVLW  32
+0063:  MOVWF  23
+0064:  CALL   012
+0065:  INCF   21,F
+0066:  GOTO   041
+....................     } 
+0067:  INCF   22,F
+0068:  GOTO   03C
+....................     } 
+0069:  GOTO   03B
+....................    } 
+....................  
+.................... } 
+006A:  SLEEP
+
+Configuration Fuses:
+   Word  1: 3F79   XT NOWDT NOPUT BROWNOUT NOLVP NOCPD NOWRT NODEBUG NOPROTECT

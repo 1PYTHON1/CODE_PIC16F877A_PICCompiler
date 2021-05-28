@@ -1,0 +1,20 @@
+#include <LCD_PICC.h>
+#include <lcd.c>
+ENUM FUNCIONES{MED,CAL,INI};
+VOID MEDIR()
+{
+output_toggle(PIN_C0);
+}
+
+void main()
+{
+   
+   lcd_init();
+
+   while(TRUE)
+   {
+   lcd_gotoxy(1,1);
+   lcd_putc("hola mundo");
+   }
+
+}

@@ -1,0 +1,25 @@
+#include <HOLA_MUNDO_PICC_.h>   ///CABECERA DONDE SE CONFIGURA EL PIC 
+
+void main()
+{
+   while(TRUE)
+   {
+
+   }
+}
+
+void LEE_B0()
+{
+ IF(INPUT(PIN_B0))  ///LEE EL PIN B0, SI ESTA EN 1 ENTRA EN LA FUNCION
+ OUTPUT_HIGH(PIN_B1);  //// PRENDE EL LED EN EL PIN B1
+ ELSE                  //// SI IF ES FALSO HACE ESTA FUNCION
+ OUTPUT_LOW(PIN_B1);    ////APAGA EL LED 
+ }
+
+void J_LUCES_1()
+{
+OUTPUT_D(0B01010101)
+delay_ms(200);
+OUTPUT_D(0B10101010)
+delay_ms(200);
+}

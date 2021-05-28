@@ -1,0 +1,65 @@
+
+ROM used:   659/8192 (8%)
+            659/8192 (8%) including unused fragments
+
+            0.5 Average locations per line
+            4.1 Average locations per statement
+
+RAM used:   14/368 (4%) at main() level
+            27/368 (7%) worst case
+
+Stack used: 5 worst case (5 in main + 0 for interrupts)
+Stack size: 8
+
+Lines Stmts  %   Files
+----- ----- ---  -----
+   83    16  10  main.c
+    5     0   0  main.h
+  771     0   0  ..\..\..\..\Program Files (x86)\PICC\Devices\16F887.h
+  456   100  63  ..\..\..\..\Program Files (x86)\PICC\Drivers\LCD.C
+  141    43  27  ..\..\..\..\Program Files (x86)\PICC\Drivers\Kbd4x4.c
+----- -----
+ 1456   159 Total
+
+Page ROM  %  RAM    Vol Diff  Functions:
+---- --- --- ---    --- ----  ----------
+0     20   3    1             @delay_ms1
+ Inline         3    760  4.5  lcd_read_byte
+0     49   7    2    262  3.7  lcd_read_nibble
+0     44   7    1    399  2.4  lcd_send_nibble
+0     92  14    3    415  3.7  lcd_send_byte
+0     70  11    6    852  6.2  lcd_init
+0     18   3    4    208  6.3  lcd_gotoxy
+0     44   7    1    354  4.7  lcd_putc
+0     20   3    0    320  5.7  @const662
+0      3   0    0      3  0.0  kbd_init
+0    105  16    3   5853 10.1  kbd_getc
+0      8   1    0   5853 10.1  @goto10701
+0     88  13    3    403  5.0  MAIN
+0      7   1    0    242  3.0  @const679
+0     86  13    4             @PSTRINGC7_648
+0      1   0    0             @const684
+ Inline         0             @cinit1
+
+Program metrics:
+    Functions               13
+    Statements              159
+    Comments                307
+    Volume (V)              21913
+    Difficulty (D)          66.8
+    Effort to implement (E) 1463288
+    Time to implement (T)   22 hours, 35 minutes
+    Est Delivered Bugs (B)  4
+    Cyclomatic Complexity   41
+    Maintainability (MI)    138
+
+ Segment     Used  Free
+-----------  ----  ----
+00000-00003     4  0  
+00004-007FF   655  1389  
+00800-00FFF     0  2048  
+01000-017FF     0  2048  
+01800-01FFF     0  2048  
+
+
+

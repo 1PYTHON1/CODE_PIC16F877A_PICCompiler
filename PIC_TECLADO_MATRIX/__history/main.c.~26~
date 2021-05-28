@@ -1,0 +1,103 @@
+#include <main.h>
+/*#define LCD_ENABLE_PIN  PIN_D2                                   ////
+#define LCD_RS_PIN      PIN_D0                                 ////
+#define LCD_RW_PIN      PIN_D1                                    ////
+#define LCD_DATA4       PIN_D4                                    ////
+#define LCD_DATA5       PIN_D5                                    ////
+#define LCD_DATA6       PIN_D6                                    ////
+#define LCD_DATA7       PIN_D7  
+#INCLUDE<LCD.C>
+#define use_portb_kbd 
+#INCLUDE<Kbd4x4.c>
+void main()
+{
+char k;
+int x;
+lcd_init();
+kbd_init();
+port_b_pullups(0xff);
+lcd_gotoxy(1,1);
+lcd_putc("TECLADO CHAR");
+lcd_gotoxy(1,2);
+   while(TRUE)
+   {
+   k = kbd_getc();
+   x=k-48;
+   if(k!=0)
+   {
+   if(k=='*')
+   lcd_putc( "\f" );
+   ELSE
+   LCD_PUTC(k);
+   delay_ms(500);
+   }
+      
+   }
+
+}*/
+#use i2c(Master,Fast=100000, sda=PIN_D1, scl=PIN_D0,force_sw) 
+#include <i2c_Flex_LCD.c>  
+#define use_portb_kbd 
+#include <Kbd.c>
+INT x;
+int y;
+char k;
+VOID LEER_A0()
+{
+float q;
+float p;
+set_adc_channel(0);
+q=read_adc();
+p=(4.9*q)/1023;
+delay_ms(5);
+LCD_GOTOXY(1,1);
+PRINTF(LCD_PUTC,"A0:%4.1f",q);
+LCD_GOTOXY(11,1);
+PRINTF(LCD_PUTC,"V:%4.2f",p);
+}
+void caracter()
+{
+lcd_gotoxy(11,2);
+ y = kbd_getc();
+   x=k-48;
+   if(k!=0)
+   {
+   if(k=='*')
+   lcd_putc( "\f" );
+   ELSE
+   LCD_PUTC(k);
+   delay_ms(500);
+   }}
+void main() { 
+kbd_init();
+port_b_pullups(0xff);
+setup_adc_ports(0);
+setup_adc(adc_clock_internal);
+lcd_init(0x4E  ,16,2);
+lcd_backlight_led(ON); //Enciende la luz de Fondo
+while (TRUE) { 
+FOR( X=1;X<=6;X++)
+{
+LCD_GOTOXY(X-1,2);
+LCD_PUTC("_");
+LCD_GOTOXY(X,2);
+LCD_PUTC("JOSE_ID");
+DELAY_MS(250);
+LEER_A0();
+caracter()
+}
+
+FOR( X=6;X>=1;X--)
+{
+LCD_GOTOXY(X+7,2);
+LCD_PUTC("_");
+LCD_GOTOXY(X,2);
+LCD_PUTC("JOSE_ID");
+DELAY_MS(250);
+LEER_A0();
+caracter()
+}
+
+}    
+} 
+

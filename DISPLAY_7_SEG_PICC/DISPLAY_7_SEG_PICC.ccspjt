@@ -1,0 +1,44 @@
+[PROJECT]
+Target=DISPLAY_7_SEG_PICC.hex
+Processor_Text=PIC16F877A
+CCSVerions=5.042
+Compiler=PCM
+CCSVersion=5.042
+[Target Data]
+FileList=DISPLAY_7_SEG_PICC.c
+[Directories]
+Include=
+[C:\Users\Casa\Desktop\PIC16F877A_PICC\DISPLAY_7_SEG_PICC\DISPLAY_7_SEG_PICC]
+Type=4
+[mru-list]
+1=DISPLAY_7_SEG_PICC.c
+
+[ProjectLog]
+Days=1
+D1=10-04-2020
+D1_L=6
+D1_L1=[41332]Project Opened.
+D1_L2=[41340]Started Editing.
+D1_L3=[42465]Stopped Editing.
+D1_L4=[43694]Started Editing.
+D1_L5=[44212]Stopped Editing.
+TotalEdit=18
+TotalDebug=0
+D1_E=18
+D1_D=0
+D1_L6=[45858]Project Closed.
+
+[Opened Files]
+1=DISPLAY_7_SEG_PICC.c
+t1=1
+2=DISPLAY_7_SEG_PICC.h
+t2=1
+Count=2
+[DISPLAY_7_SEG_PICC.c]
+Type=4
+
+[defines]
+buildcount=4
+[Units]
+Count=1
+1=DISPLAY_7_SEG_PICC (main)

@@ -1,0 +1,14 @@
+#include <HOLA_MUNDO_PICC_.h>
+
+void main()
+{
+
+   while(TRUE)
+   {
+ IF(INPUT(PIN_B0)==1)
+ OUTPUT_HIGH(PIN_B1);
+ ELSE
+ OUTPUT_LOW(PIN_B1);
+   }
+
+}

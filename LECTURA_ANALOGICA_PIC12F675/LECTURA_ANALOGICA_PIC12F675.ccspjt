@@ -1,0 +1,73 @@
+[PROJECT]
+Target=LECTURA_ANALOGICA_PIC12F675.hex
+Processor_Text=PIC12F675
+CCSVerions=5.042
+Compiler=PCM
+CCSVersion=5.042
+[Target Data]
+FileList=LECTURA_ANALOGICA_PIC12F675.c
+[Directories]
+Include=
+[C:\Users\Casa\Desktop\PIC16F877A_PICC\LECTURA_ANALOGICA_PIC12F675\LECTURA_ANALOGICA_PIC12F675]
+Type=4
+[mru-list]
+1=LECTURA_ANALOGICA_PIC12F675.c
+
+[ProjectLog]
+Days=3
+D1=16-04-2020
+D1_L=10
+D1_L1=[64160]Project Opened.
+D1_L2=[64173]Started Editing.
+D1_L3=[65317]Stopped Editing.
+D1_L4=[65425]Started Editing.
+D1_L5=[65765]Stopped Editing.
+TotalEdit=94
+TotalDebug=0
+D1_E=94
+D1_D=0
+D1_L6=[65765]Project Closed.
+D1_L7=[65794]Project Opened.
+D1_L8=[65899]Started Editing.
+D1_L9=[70314]Stopped Editing.
+D1_L10=[70314]Project Closed.
+D2=17-04-2020
+D2_L=13
+D2_L1=[37567]Project Opened.
+D2_L2=[37589]Started Editing.
+D2_L3=[38200]Stopped Editing.
+D2_L4=[38637]Started Editing.
+D2_L5=[39738]Stopped Editing.
+D2_L6=[40165]Started Editing.
+D2_L7=[40565]Stopped Editing.
+D2_L8=[41533]Started Editing.
+D2_L9=[42598]Stopped Editing.
+D2_L10=[42605]Started Editing.
+D2_L11=[42654]Project Closed.
+D2_L12=[43015]Project Opened.
+D2_L13=[43156]Project Closed.
+D3=18-04-2020
+D3_L=2
+D3_L1=[58521]Project Opened.
+D3_L2=[58541]Project Closed.
+
+[Opened Files]
+1=LECTURA_ANALOGICA_PIC12F675.c
+t1=29
+2=LECTURA_ANALOGICA_PIC12F675.h
+t2=1
+Count=5
+3=LCD_PCF.c
+t3=41
+4=..\..\..\..\..\Program Files (x86)\PICC\Drivers\i2c_Flex_LCD.c
+t4=164
+5=..\I2C_LCD_NUEVA_LIBRERIA\I2C_LCD_NUEVA_LIBRERIA.c
+t5=5
+[LECTURA_ANALOGICA_PIC12F675.c]
+Type=4
+
+[defines]
+buildcount=87
+[Units]
+Count=1
+1=LECTURA_ANALOGICA_PIC12F675 (main)

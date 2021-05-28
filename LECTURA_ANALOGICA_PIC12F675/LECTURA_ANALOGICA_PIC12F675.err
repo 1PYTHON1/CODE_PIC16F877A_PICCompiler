@@ -1,0 +1,4 @@
+>>> Warning 202 "C:\Program Files (x86)\PICC\Drivers\i2c_Flex_LCD.c" Line 174(13,17): Variable never used:   data
+      Memory usage:   ROM=72%      RAM=25% - 48%
+      0 Errors,  1 Warnings.
+Build Successful.

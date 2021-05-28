@@ -1,0 +1,52 @@
+#include <LCD_PICC.h>
+#include <lcd.c>
+ENUM FUNCIONES{MED,CAL,INI};
+VOID MEDIR()
+{
+output_toggle(PIN_C0);
+}
+VOID CALIBRAR()
+{
+output_toggle(PIN_C1);
+}
+VOID INICIALIZACION()
+{
+output_toggle(PIN_C2);
+}
+VOID RUN_FUN(INT NUMFUNC)
+{
+SWITCH(NUMFUNC)
+{
+CASE MED:
+MEDIR();
+BREAK;
+CASE CAL:
+CALIBRAR();
+BREAK;
+CASE INI:
+INICIALIZACION();
+BREAK;
+}
+}
+
+
+void main()
+{
+   CHAR ITEM;
+   CHAR N_MENUS=3;
+   lcd_init();
+
+   while(TRUE)
+   {
+   IF(INPUT(PIN_B0))
+   {
+   ITEM++;
+   DELAY_MS(300);
+   LCD_PUTC('/F');
+   PRINTF(LCD_PUTC,"MEDIR");
+   }
+   
+
+   }
+
+}
